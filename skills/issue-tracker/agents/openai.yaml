@@ -1,0 +1,3 @@
+interface:
+  display_name: "Issue Tracker"
+  short_description: "Draft bug reports, user stories, and tasks for any issue tracker."
