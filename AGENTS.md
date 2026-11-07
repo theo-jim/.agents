@@ -35,6 +35,8 @@ Herdr, aide-mémoire (ne pas relancer `--help`, ça coûte des tokens à chaque 
 
 Herd (coordination multi-agents) : ne jamais fermer le pane d'un worker (herdr pane close) sans demander confirmation explicite avant, même si son travail est terminé et son rapport déjà récupéré.
 
+Herd (revue) : tout worker builder est suivi d'un worker reviewer d'une autre famille (builder claude, reviewer codex ; builder codex, reviewer claude) avant de présenter le résultat ou de créer la MR. Si la revue n'est pas lancée, le dire explicitement et demander.
+
 Les commentaires dans le code doivent être écrit en anglais
 
 
@@ -48,6 +50,11 @@ Pour toute revue de code (branche, MR/PR, diff en cours), suis le skill `code-re
 * Ne met JAMAIS : 🤖 Generated with ... ou Co-Authored-By: ... dans les commit ou description de MR et PR.
 
 Pour toute Pull Request ou Merge Requst, suis le skill `pr` de `~/.agents/skills/pr/SKILL.md`.
+
+
+## Tickets
+
+Pour toute création ou réécriture de ticket (Jira ou autre : bug, user story, tâche), charge d'abord le skill `issue-tracker` de `~/.agents/skills/issue-tracker/SKILL.md` et remplis son modèle avant d'appeler l'outil du tracker. Ne rédige jamais une description de mémoire ni sur le format d'un ticket voisin.
 
 
 # Préférences globales
